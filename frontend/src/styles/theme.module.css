@@ -1,0 +1,12 @@
+:global(:root) {
+  --color-background: #F9F7F7;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #DBE2EF;
+  --color-border: #DBE2EF;
+  --color-primary: #3F72AF;
+  --color-primary-hover: #365F91;
+  --color-primary-subtle: #EAF0F8;
+  --color-text: #112D4E;
+  --color-text-muted: #52677E;
+  --color-on-primary: #FFFFFF;
+}

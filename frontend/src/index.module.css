@@ -1,84 +1,80 @@
-:root {
+:global(:root) {
   font-family: "Ubuntu", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  color: var(--color-text);
+  background: var(--color-background);
 }
 
-body {
+:global(body) {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
 }
 
-button,
-input,
-select,
-textarea {
+:global(button),
+:global(input),
+:global(select),
+:global(textarea) {
   font: inherit;
 }
 
-.dm-serif-display-regular,
-.navbar-brand {
+:global(.dm-serif-display-regular) {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.dm-serif-display-regular-italic {
+:global(.dm-serif-display-regular-italic) {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: italic;
 }
 
-.ubuntu-light {
+:global(.ubuntu-light) {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
-.ubuntu-regular {
+:global(.ubuntu-regular) {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.ubuntu-medium {
+:global(.ubuntu-medium) {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-.ubuntu-bold {
+:global(.ubuntu-bold) {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.ubuntu-light-italic {
+:global(.ubuntu-light-italic) {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   font-style: italic;
 }
 
-.ubuntu-regular-italic {
+:global(.ubuntu-regular-italic) {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
-.ubuntu-medium-italic {
+:global(.ubuntu-medium-italic) {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
 
-.ubuntu-bold-italic {
+:global(.ubuntu-bold-italic) {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-style: italic;
-}
-
-.navbar-brand {
-  color: inherit;
-  text-decoration: none;
 }

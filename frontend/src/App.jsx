@@ -1,12 +1,8 @@
-import './App.css'
+import Navbar from './components/Navbar.jsx'
 
 function App() {
   return (
-    <nav>
-      <a className="navbar-brand" href="/">
-        Opinion
-      </a>
-    </nav>
+    <Navbar />
   )
 }
 
