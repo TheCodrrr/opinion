@@ -4,10 +4,12 @@
 }
 
 .nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 28rem) minmax(0, 1fr);
   align-items: center;
+  gap: 1.5rem;
   min-height: 4.5rem;
-  max-width: 72rem;
+  max-width: 100vw;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -31,9 +33,127 @@
   outline-offset: 4px;
 }
 
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.875rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  fill: none;
+  stroke: var(--color-text-muted);
+  stroke-linecap: round;
+  stroke-width: 1.75;
+  pointer-events: none;
+}
+
+.searchInput {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.625rem 0.875rem 0.625rem 2.625rem;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 0.625rem;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+.searchInput:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profileButton {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.625rem;
+  place-items: center;
+  color: var(--color-primary);
+  background-color: var(--color-primary-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profileButton:hover {
+  color: var(--color-on-primary);
+  background-color: var(--color-primary);
+}
+
+.profileButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.profileButton svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.75;
+}
+
+.profileMenu {
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 0.625rem);
+  right: 0;
+  min-width: 10rem;
+  padding: 0.5rem;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.5rem 1.25rem rgb(17 45 78 / 10%);
+}
+
+.menuTitle {
+  display: block;
+  padding: 0.625rem 0.75rem;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
 @media (max-width: 36rem) {
   .nav {
+    grid-template-columns: 1fr auto;
+    gap: 0.875rem;
     min-height: 4rem;
-    padding: 0 1rem;
+    padding: 0.625rem 1rem;
+  }
+
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .profile {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .search {
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
 }
